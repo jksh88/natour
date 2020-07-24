@@ -17,15 +17,6 @@
     transform: translateY(0);
     opacity: 1; } }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 1.2rem;
-  animation-name: moveInFromRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-in; }
-
 @keyframes moveInFromRight {
   0% {
     transform: translateX(10rem);
@@ -60,16 +51,62 @@ body {
 
 .heading-primary {
   color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .heading-primary--main {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInFromLeft;
+    animation-timing-function: ease-in;
+    animation-duration: 1s; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.2rem;
+    animation-name: moveInFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, red, yellow);
+  display: inline-block;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition-duration: .5s;
+  letter-spacing: .1rem;
+  margin-bottom: 5rem; }
+  .heading-secondary:hover {
+    transform: skewX(10deg) skewY(3deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(255, 255, 255, 0.5); }
+
+.heading-tertiary {
+  font-size: 1.7rem;
+  font-weight: 900;
   text-transform: uppercase; }
 
-.heading-primary--main {
-  display: block;
-  font-size: 5.5rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInFromLeft;
-  animation-timing-function: ease-in;
-  animation-duration: 1s; }
+.paragraph {
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
 
 .btn:link,
 .btn:visited {
@@ -119,6 +156,24 @@ body {
   animation: moveFromBottom 1s ease-out .2s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 1rem;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  transform: translateY(0); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -144,7 +199,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -153,21 +207,60 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 2rem; }
+      margin-right: 6rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 2rem) /2);
-    background-color: orangered;
-    float: left; }
+    width: calc((100% - 6rem) /2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 2rem) /3); }
+    width: calc((100% - 2 * 6rem) /3); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 2rem) /3) + 2rem); }
+    width: calc(2 * ((100% - 2 * 6rem) /3) + 6rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 2rem * 3) /4); }
+    width: calc((100% - 6rem * 3) /4); }
   .row .col-2-of-4 {
-    width: calc(2 * (100% - 2rem * 3) /4 + 2rem); }
+    width: calc(2 * (100% - 6rem * 3) /4 + 6rem); }
   .row .col-3-of-4 {
-    width: calc(100% - ((100% - 2rem * 3) /4) - 2rem); }
+    width: calc(100% - ((100% - 6rem * 3) /4) - 6rem); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem;
+  margin-top: -19vh; }
+
+  .composition {
+    position: relative;
+  }
+    
+  .composition__photo {
+      width: 55%;
+      box-shadow: 0 1.5rem 4rem rgba(0,0,0, .3);
+      border-radius: 2px;
+      position: absolute;
+      transition: all .4s;
+      outline-offset: .5rem;
+  }
+
+  .composition__photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2.5rem 4rem rgba(0,0,0,.6);
+    z-index:20;
+    outline: 2rem solid green;
+  }
+
+  .composition__photo--p1 {
+        left: 0rem;
+        top: -2rem;
+  }
+
+  .composition__photo--p2 {
+    left: 12rem;
+    top: 12rem;
+    z-index: 1;
+}
+
+.composition__photo--p3 {
+  left: 20rem;
+  top: 1rem;
+  /* z-index: -1; */
+}

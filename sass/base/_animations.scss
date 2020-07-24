@@ -16,16 +16,6 @@
   }
 }
 
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 1.2rem;
-  animation-name: moveInFromRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-}
-
 @keyframes moveInFromRight {
   0% {transform: translateX(10rem); opacity:0.2}
   75%{transform: translateX(-1rem); opacity: 0.8}

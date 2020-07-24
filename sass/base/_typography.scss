@@ -8,16 +8,64 @@ body {
 }
 
 .heading-primary {  
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
+
+  backface-visibility: hidden;
+
+  &--main {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInFromLeft;
+    animation-timing-function: ease-in;
+    animation-duration: 1s
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.2rem;
+    animation-name: moveInFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+  }
 }
 
-.heading-primary--main {
-  display: block;
-  font-size: 5.5rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInFromLeft;
-  animation-timing-function: ease-in;
-  animation-duration: 1s
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, red, yellow);
+  display: inline-block;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition-duration: .5s;
+  letter-spacing: .1rem;
+  margin-bottom: 5rem;
+  //Q: text displayed in two lines. also align-text not working
+
+  &:hover {
+    transform: skewX(10deg) skewY(3deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(255, 255, 255, .5);  //Q: not working
+
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
