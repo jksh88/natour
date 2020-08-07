@@ -208,6 +208,17 @@ body {
   margin-bottom: 1rem;
 }
 
+.card {
+  background-color: orangered;
+  height: 50px;
+  width: 50px;
+}
+
+.card:hover {
+  -webkit-transform: rotateY(180);
+          transform: rotateY(180);
+}
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
@@ -240,8 +251,13 @@ body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
-  -webkit-transform: skewY(-10deg);
-          transform: skewY(-10deg);
+  -webkit-transform: translateY(-12rem) skewY(-8deg);
+          transform: translateY(-12rem) skewY(-8deg);
+}
+
+.section-features > * {
+  -webkit-transform: skewY(8deg);
+          transform: skewY(8deg);
 }
 
 .composition {
@@ -468,5 +484,11 @@ body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -21rem;
 }
 /*# sourceMappingURL=main.css.map */
